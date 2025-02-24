@@ -31,8 +31,8 @@ CREATE TABLE detalhes(
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   duracao INT NOT NULL,
   sinopse TEXT(1000) NOT NULL,
-  bilheteria DECIMAL(16,2),
-  orcamento DECIMAL(16,2),
+  bilheteria DECIMAL(16,2) null,
+  orcamento DECIMAL(16,2) null,
   filmes_id INT NOT NULL --SERÁ CHAVE ESTRANGEIRA
 );
 ```
