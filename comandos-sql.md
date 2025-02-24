@@ -8,4 +8,12 @@ Neste arquivo esta a referência de comandos visando a estruturação do banco d
 CREATE DATABASE vendas CHARACTER SET utf8mb4;
 ```
 
+### Criar tabela de Fabricante
+
+```sql
+CREATE TABLE fabricantes(
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(50) NOT NULL
+);
+```
 
