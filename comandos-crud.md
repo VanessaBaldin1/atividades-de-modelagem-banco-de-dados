@@ -37,3 +37,61 @@ VALUES(
   2  --id do fabricante Dell
 );
 ```
+```sql
+INSERT INTO produtos(nome, descricao, preco, quantidade, fabricante_id)
+VALUES(
+  'Tablet Android',
+  'Tablet com a versão 16 do sitema operacional Android, possui tela de 10 polegadas e armazenamento de 128 GB. Estou sem ideias do que escrever aqui',
+  900,
+  12,
+  5 -- Samsung
+);
+```
+
+```sql
+INSERT INTO produtos(nome, descricao, preco, quantidade, fabricante_id)
+VALUES(
+  'Geladeira',
+  'Refrigerador frost-free com acesso à Internet',
+  5000,
+  12,
+  6 -- Brastemp
+), (
+  'iphone 18 Pro Max ferradão',
+  'Smartphone Apple cheio de frescura e caro para caramba... coisa de rico..',
+  9666.66,
+  3,
+  3 --Apple
+), (
+    'iPad Mini',
+    'Tablet Apple com tela retina display e bla bla bla e mó bunitinha',
+    4999.12,
+    5,
+    3 --- Apple
+);
+
+```
+
+### Comandos do exercicio Exercício 03 - 25/02/2025
+
+## INSERT (fabricantes)
+```sql
+INSERT INTO fabricantes(nome) VALUES('Positivo'),('Microsoft');
+```
+## Adicione mais dois produtos na tabela produtos conforme indicado:
+```sql
+INSERT INTO produtos(nome, descricao, preco, quantidade, fabricante_id)
+VALUES(
+  'Xbox S',
+  'Velocidade e desempenho de última geração.',
+  1997,
+  5,
+  8 -- Microsoft
+), (
+  'Notebook Motion',
+  'Intel Dual Core 4GB de RAM, 128GB SSD e Tela 14,1 polegadas.',
+  1213.65,
+  8,
+  7 -- Positivo
+);
+```
