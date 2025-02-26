@@ -144,3 +144,15 @@ SELECT nome, descricao FROM produtos
 WHERE fabricante_id IN(3, 5);
 
 ```
+#### NÃO (NOT)
+```sql
+--Nome, decrição  e preço de todos os produtos Exceto da Positivo
+
+SELECT nome, descricao, preco FROM produtos
+WHERE NOT fabricante_id = 7;
+
+-- Versão usando operador relacional de "diferença/diferente"
+SELECT nome, descricao, preco FROM produtos
+WHERE fabricante_id != 7;
+```
+
