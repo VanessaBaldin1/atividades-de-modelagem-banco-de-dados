@@ -171,6 +171,20 @@ WHERE id = 1;
 
 UPDATE produtos SET quantidade = 10
 WHERE preco <= 2000 AND fabricante_id != 8;
+```
 
+--- 
 
+## DELETE (fabricantes e Produtos)
+
+***Cuidado 🤦‍♀️ ***
+
+**SEMPRE USE** a cláusula  'WHERE' em comando 'UPDATE' especificando um ou mais condições para a atualização.
+```sql
+DELETE FROM fabricantes WHERE id = 4;
+DELETE FROM fabricantes WHERE id = 1;
+
+DELETE FROM produtos WHERE id = 4;
+
+DELETE FROM fabricantes WHERE id = 3;
 ```
