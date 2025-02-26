@@ -106,7 +106,11 @@ SELECT * FROM produtos;
 
 -- Lendo somente nome e preco de todos os registros
 SELECT nome, preco FROM produtos;
-
 SELECT preco, nome FROM produtos;
 
+-- Mostrar nome, preco e quantidade SOMENTE dos produtos que custam abaixo de  5000
+
+SELECT nome, preco, quantidade FROM produtos
+WHERE preco < 5000;
 ```
+
