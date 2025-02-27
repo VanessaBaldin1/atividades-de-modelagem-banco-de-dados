@@ -210,4 +210,22 @@ SELECT nome, preco FROM produtos ORDER BY preco DESC;
 SELECT nome, preco, quantidade FROM produtos
 WHERE fabricante_id = 5 ORDER BY quantidade;
 ```
+### Operações e funções de agregação
+
+```sql
+-- Função de SOMA (SUM)
+SELECT SUM(preco) FROM produtos;
+-- (AS)ALIAS/APELIDO PARA COLUNAS
+SELECT SUM(preco) AS Total FROM produtos; -- alias/apelido para coluna
+SELECT SUM(preco) AS "Total dos Preços dos Produtos" FROM produtos;
+SELECT nome as Produto, preco as Preço FROM produtos;
+SELECT nome Produto, preco Preço FROM produtos; -- omitindo o AS
+
+
+
+-- FORMAR O NUMERO APENAS PARA VISUALIZAÇÃO DOS DADOS
+-- Funções de formatação/configuração: FORMAT e REPLACE
+SELECT FORMAT(SUM(preco),2) AS Total FROM produtos;
+SELECT REPLACE(FORMAT(SUM(preco),2), ".", ",") AS Total FROM produtos;
+```
 
