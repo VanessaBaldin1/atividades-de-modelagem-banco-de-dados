@@ -237,12 +237,73 @@ SELECT ROUND(AVG(preco), 2) As "Média dos Preços" FROM produtos;
 SELECT COUNT(id) AS "Qtd de Produtos" FROM produtos;
 SELECT COUNT(DISTINCT fabricante_id) AS "Qtd de Fabricantes com Produtos" FROM produtos;
 
+--- Segmentação/Agrupamento de resultados
+SELECT fabricante_id, SUM(preco) AS Total FROM produtos
+GROUP BY fabricante_id;
+
+
 -- Operações matemáticas 
 SELECT nome, preco, quantidade, (preco * quantidade) AS Total
 FROM produtos;
+```
 
+## Consultas (Queries) em duas ou mais tabelas relacionadas (JUNÇÃO/JOIN)
+
+### Exibir o nome do produto e o nome do fabricante do produto
+```sql
+-- SELECT nomeDaTabela1.nomeDaColuna, nomeDaTabela2.nomeDaColuna,
+SELECT produtos.nome AS Produto, fabricantes.nome As Nome do fabricante
+
+-- JOIN permite JUNTAR as tabelas no momento do SELECT
+FROM produtos JOIN fabricantes
+
+-- ON indicando os critérios do relacionamento
+-- ON tabela1.chave_estrangeira = tabela2.chave_primária
+ON produtos.fabricante_id = fabricantes.id;
+```
+
+### Nome do Produto, preço do produto, nome do fabricante ordenados pelo nome do produto e pelo preço
+```sql
+SELECT 
+    produtos.nome AS Produto,
+    produtos.preco AS Preço,
+    fabricantes.nome AS Fabricante,
+FROM produtos JOIN fabricantes
+ON produtos.fabricante_id = fabricantes.id
+ORDER BY Produto ASC , Preço DESC;
+```
+
+### Fabricante, Soma dos preços, Quantidade de Produtos POR Fabricante
+
+```sql
+-- INNER JOIN/RIGHT JOIN/LEFT JOIN
+
+SELECT 
+    fabricantes.nome AS Fabricante,
+    SUM(produtos.preco) AS Total,
+    COUNT(produtos.fabricante_id) As "Qtd de Produtos"
+FROM produtos RIGHT JOIN fabricantes
+ON produtos.fabricante_id = fabricantes.id
+GROUP BY Fabricante
+ORDER BY Total;
 
 ```
 
+## Mostrar Filme e o Gênero do filme
 
+```sql
+SELECT 
+    filmes.titulo As Filme,
+    generos.nome As Genero
+FROM filmes JOIN generos
+ON filmes.genero_id = generos.id;
+```
+## Mostrar Filme e o Detalhe do filme
 
+```sql
+SELECT 
+    filmes.titulo As Filme,
+    detalhes.sinopse As detalhes
+FROM filmes JOIN detalhes
+ON detalhes.filmes_id = filmes.id;
+```
