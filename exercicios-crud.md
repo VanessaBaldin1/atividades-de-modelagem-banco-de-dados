@@ -58,6 +58,18 @@ VALUES (
 
 ```
 ```sql
+-- selecionar campos de duração, sinopse na tabela detalhes
 SELECT duracao, sinopse FROM detalhes;
 ```
 
+
+```sql
+-- Troca de valor da Bilheteria do filme Ilha do medo
+UPDATE detalhes SET bilheteria = 10000.96
+WHERE id = 2;
+```
+
+```sql
+-- Deleta o genero ação
+DELETE FROM generos WHERE id = 4;
+```
