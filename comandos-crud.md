@@ -307,3 +307,16 @@ SELECT
 FROM filmes JOIN detalhes
 ON detalhes.filmes_id = filmes.id;
 ```
+
+### Mostrar Filme, o Gênero e o Detalhe/ Sinopse do filme
+```sql
+SELECT 
+   filmes.titulo As Filme,
+   generos.nome As Genero,
+   detalhes.sinopse As detalhes
+FROM filmes JOIN detalhes JOIN genero
+ON filmes.genero_id = generos.id;
+ON detalhes.filmes_id = filmes.id;
+
+
+```
