@@ -305,6 +305,7 @@ SELECT
     filmes.titulo As Filme,
     detalhes.sinopse As detalhes
 FROM filmes JOIN detalhes
+     --tabela.FK     =  outraTabela.PK         
 ON detalhes.filmes_id = filmes.id;
 ```
 
@@ -317,6 +318,4 @@ SELECT
 FROM filmes
 JOIN generos ON filmes.genero_id = generos.id
 JOIN detalhes ON detalhes.filmes_id = filmes.id;
-
-
 ```
