@@ -320,5 +320,5 @@ JOIN generos ON filmes.genero_id = generos.id
 JOIN detalhes ON detalhes.filmes_id = filmes.id;
 
 
---**PS: USAR NOME DAS TABELAS EM PLURAL E fk NO SIGURAR**
+--**PS: USAR NOME DAS TABELAS EM PLURAL E CAMPOS NO SIGURAR**
 ```
