@@ -314,9 +314,9 @@ SELECT
    filmes.titulo As Filme,
    generos.nome As Genero,
    detalhes.sinopse As detalhes
-FROM filmes JOIN detalhes JOIN genero
-ON filmes.genero_id = generos.id;
-ON detalhes.filmes_id = filmes.id;
+FROM filmes
+JOIN generos ON filmes.genero_id = generos.id
+JOIN detalhes ON detalhes.filmes_id = filmes.id;
 
 
 ```
